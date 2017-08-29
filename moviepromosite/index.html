@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title>alien: covenant</title>
+	<link rel="stylesheet" type="text/css" href="css/alien_styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Arima+Madurai:100|Megrim" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- 						top of page
+***********************************************************
+-->
+<div class="background">
+	<div class="cover css-typing">
+		<h1>ALIEN</h1>
+
+		<h2>Welcome to the Weyland terminal
+			 click below to be briefed.
+		</h2>
+
+
+		<!-- ******************************************************
+		 					button container
+		 -->
+		<div class="buttonContainer">
+			<ul>
+				<button id="button1" class="button"  >
+					xenomorph
+				</button>
+			</ul>
+				<!-- ****************************************************
+							modal content
+				-->
+				<div id="xenomorph" class="xenoModal">
+					<img src="img/xenocycle.jpg" height="500px" width="500px">
+
+					<p>The xenomorph is a species with multiple life cycles, possibly originating from the planet Proteus. One of the deadliest of all known alien species, these creatures need a host organism in order to reproduce. The appearance of the Xenomorph varies depending on the facehuggers host. The human phenotype is generally around 7–8 feet, and roughly 136.0 to 181.4 kilograms in weight, with a long, muscular tail and large, curved, oblong head.
+					</p>
+					<br>
+					<iframe width="650" height="400"
+						src="https://www.youtube.com/embed/H0VW6sg50Pk">
+					</iframe>
+				</div>
+				<!-- ****************************************************
+							end of modal content
+				-->
+		</div>
+		<!-- 		end of button container
+		******************************************************
+		-->
+
+		<h1>COVENANT</h1>
+	</div>
+</div>
+<!-- 				end of page
+***********************************************************
+-->
+
+
+
+
+
+<!-- ******************************************************
+					script for modal
+-->
+<script>
+
+//			open modal on click
+
+$(document).ready(function(){
+	$("#button1").on('click', function(){
+		$("#xenomorph").fadeIn('slow');
+	});
+});
+
+var modal = document.getElementById("xenomorph");
+
+
+//		if the modal is clicked close modal
+
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<!-- *****************************************************
+				end of modal script
+-->
+
+</body>
+</html>

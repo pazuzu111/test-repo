@@ -1,0 +1,172 @@
+html, body{
+	background-color: black;
+
+}
+*{
+	margin: 0;
+	text-align: center;
+}
+
+/*************************************************/
+/*				background
+*/
+.background{
+	background: url('../img/alienhome.jpg');
+	background-size: cover;
+	height:100%;
+	width: 100%;
+	animation: fadein 6s;
+
+}
+
+/*					fade in animation for background       */
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+/*	black translucent cover over background
+************************************************
+*/
+
+.cover{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: auto;
+  border: .5px groove #32CD32;
+	height: 90%;
+  width:  90%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*							main title
+********************************************
+*/
+
+h1{
+	text-align: center;
+	text-decoration: none;
+	color: #32CD32;
+	font-family: 'Megrim', cursive;
+	letter-spacing: 30;
+	font-weight: 100;
+	animation: fadeintext 30s;
+	font-size: 3em;
+
+}
+
+
+
+/*		fade in text anmation    */
+
+	@-webkit-keyframes fadeintext {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+
+	@keyframes fadeintext {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+
+
+/*
+							briefing info
+****************************************
+*/
+ h2 {
+	color: #32CD32 ;
+	font-weight: 100;
+	font-family: monospace;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: 0 auto;
+	animation:	typing 7.5s steps(35, end),
+							cursor .5s step-end infinite;
+
+
+}
+
+
+	/* Animation  */
+	@-webkit-keyframes typing{
+		from { width: 0;}
+		to { width: 100%;}
+	}
+
+	@keyframes typing{
+		from{ width: 0;}
+		to{ width: 100%;}
+	}
+
+
+/*						button styles
+******************************************
+*/
+
+.buttonContainer{
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	width: 100%;
+	border-radius: 5px;
+	padding: 10px;
+}
+.button{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #32CD32;
+	border: 1px groove #32CD32;
+	border-radius: 1;
+	font-size: 15px;
+	padding: 15px 30px;
+	margin-right: 83px;
+	margin-top: 90%;
+}
+.button:hover{
+	background-color: #32CD32;
+	color: black;
+	border: 1px groove black;
+	border: 1;
+	border-radius: 1;
+	padding: 15px 30px;
+	margin-right: 83px;
+	margin-top: 90%;
+}
+
+/*							modal styles
+********************************************
+*/
+
+.xenoModal{
+	display: none;
+  position: fixed;
+	height: 90%;
+  width: 90%;
+	border: .5px groove #32CD32;
+	background-color: black;
+	color: #32CD32;
+	text-align: center;
+  z-index: 1; /* Sit on top */
+  top: 50%;
+	transform: translateY(-50%);
+	margin: auto;
+	overflow: auto;
+
+}
+
+/*        	modal text content
+*****************************************
+*/
+
+p {
+ position: relative;
+ color: #d7b94c;
+ font-family: 'courier', monospace;
+ font-size: 20px;
+ text-align: center;
+ margin-top: 75px;
+ font-weight: 100;
+
+}
